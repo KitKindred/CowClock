@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -34,6 +35,7 @@ public class CowClockFX extends Application {
 				String cowTime = cow.generateCowTime();
 				Text time = new Text(cowTime);
 				time.setFont(new Font(30));
+				time.setFill(Color.LIME);
 				
 				//Formats the spacing and colour of the window.
 				this.setPadding(new Insets(12, 15, 12, 1));
@@ -68,8 +70,7 @@ public class CowClockFX extends Application {
 				Text time = new Text(cowTime);
 				time.setFont(new Font(30));
 				//This sets the colour of the cow
-				time.setStyle("-fx-stroke: lime;");
-				
+				time.setFill(Color.LIME);
 				
 				//This sets the cow as the top of the MainPanel "mainPanel".
 				mainPanel.setTop(time);				
